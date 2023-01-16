@@ -1,0 +1,28 @@
+// Create a base class "Animal" with protected member variable "name" and
+//  public member function "getName()" that returns the value of "name".
+//   Create a derived class "Mammals" that inherits from "Animals" and
+//    has a protected member variable "numLegs" and public member function "getNumLegs()" 
+//    that returns the value of "numLegs".
+#include<iostream>
+using namespace std;
+class Animal{
+    protected:
+    string name="danish";
+    public:
+    string getName(){
+        return name;
+
+    }
+};
+class Mammals:public Animal{
+    protected:
+    int numLegs=5;
+    public:
+    int getNumLegs(){
+        return numLegs;
+    }
+};
+int main(){
+    Mammals h;
+   cout<< h.getNumLegs()<<"   "<<h.getName();
+}
