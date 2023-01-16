@@ -1,0 +1,32 @@
+// Create a base class "Vehicle" with protected member variables "make" and "model"
+//  and public member functions "getMake()" and "getModel()" that 
+//  return the values of "make" and "model" respectively. 
+//  Create a derived class "Car" that inherits from "Vehicle" and has a
+//   public member function "displayInfo()" that displays the make and model of the car.
+
+#include<iostream>
+using namespace std;
+class Vehicle{
+    protected:
+    // string make,made;
+    // make="Danish";
+    // made="sports";
+    int make=2,made=1;
+    public:
+    int getMake(){
+        return make;
+    }
+    int getModel(){
+        return made;
+    }
+};
+class Car:public Vehicle{
+    public:
+    void displayInfo(){
+        cout<<getMake()<<"   "<<getModel();
+    }
+};
+int main(){
+    Car c;
+    c.displayInfo();
+}
